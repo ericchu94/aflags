@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h2>{{ user }}</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 form-inline">
+    <div class="form-group">
+      <label for="name" class="sr-only">Name</label>
+      <input (keyup)="keyup($event)" type="text" class="form-control" id="name" placeholder="Name" [(ngModel)]="name" />
+    </div>
+    <input type="button" class="btn btn-primary" value="Create" id="create" (click)="createFlag()" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12" id="container">
+    <div class="row" id="flags">
+      <div *ngFor="let flag of flags" class="col-lg-2 col-md-3 col-sm-4 col-xs-12 flag">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>{{ flag.name }}</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+						<button class="btn" (click)="toggleFlag(flag)" [class.btn-success]="flag.enabled" [class.btn-danger]="!flag.enabled">{{ flag.enabled ? "On" : "Off" }}</button>
+            <button class="delete btn btn-link" (click)="deleteFlag(flag)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

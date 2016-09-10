@@ -6,7 +6,7 @@ import { Flag } from './flag';
 
 @Injectable()
 export class FlagService {
-  private flagsUrl = 'http://localhost:3000/';
+  private flagsUrl = 'http://home.ericchu.net:3000/';
   private socket: SocketIOClient.Socket;
 
   constructor() {

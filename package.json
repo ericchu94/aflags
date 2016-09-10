@@ -1,6 +1,8 @@
 {
-  "name": "angular2-quickstart",
+  "name": "aflags",
   "version": "1.0.0",
+  "description": "A Flags client in angular",
+  "respository": "https://github.com:ericchu94/aflags.git",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server",

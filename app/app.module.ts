@@ -5,6 +5,7 @@ import { FormsModule }    from '@angular/forms';
 import { AppComponent }   from './app.component';
 import { routing }        from './app.routing';
 
+import { BrowseComponent }     from './browse.component';
 import { FlagsComponent }     from './flags.component';
 import { FlagService }     from './flag.service';
 
@@ -16,6 +17,7 @@ import { FlagService }     from './flag.service';
   ],
   declarations: [
     AppComponent,
+    BrowseComponent,
     FlagsComponent,
   ],
   providers: [
